@@ -1,24 +1,130 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
+import heroTown from "@/assets/hero-town.jpg";
+import work1 from "@/assets/work-1.jpg";
+import work2 from "@/assets/work-2.jpg";
+import work3 from "@/assets/work-3.jpg";
+
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "Morioh Ink — Bizarre Tattoo Studio" },
+      {
+        name: "description",
+        content:
+          "Morioh Ink is a tattoo studio for bold outlines, screentone shading and unbreakable design. Book a session in Morioh-cho.",
+      },
+      { property: "og:title", content: "Morioh Ink — Bizarre Tattoo Studio" },
+      {
+        property: "og:description",
+        content: "Bold outlines, screentone shading, unbreakable design. Tattoo studio in Morioh-cho.",
+      },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
+const works = [
+  { src: work1, title: "Golden Arrow", meta: "Forearm · blackwork + gold" },
+  { src: work2, title: "Crazy Diamond", meta: "Full back · 3 sessions" },
+  { src: work3, title: "Kira Roses", meta: "Hand · pink & thorn" },
+];
+
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+    <main>
+      {/* HERO */}
+      <section className="relative isolate overflow-hidden border-b-4 border-ink">
+        <img
+          src={heroTown}
+          alt="Illustrated suburban street in Morioh at golden dusk"
+          width={1920}
+          height={1088}
+          className="absolute inset-0 h-full w-full object-cover"
+        />
+        <div className="absolute inset-0 bg-ink/55" />
+        <div className="relative mx-auto flex min-h-[86vh] max-w-6xl flex-col justify-center px-5 py-24">
+          <p className="mb-4 inline-flex w-fit border-4 border-ink bg-accent px-3 py-1 text-xs font-bold uppercase tracking-[0.3em] text-accent-foreground">
+            Tattoo studio · Morioh-cho
+          </p>
+          <h1 className="manga-outline text-[clamp(3.5rem,12vw,9rem)] text-primary">
+            MORIOH INK
+          </h1>
+          <p className="mt-6 max-w-xl text-lg text-foreground/90">
+            Nothing here is ordinary. Heavy outlines, screentone shadows and
+            colors that shouldn't work together — permanently, on skin.
+          </p>
+          <div className="mt-9">
+            <Link
+              to="/contact"
+              className="inline-flex border-4 border-ink bg-secondary px-8 py-4 font-display text-lg uppercase text-secondary-foreground shadow-[10px_10px_0_0_var(--ink)] transition-transform hover:translate-x-1 hover:translate-y-1 hover:shadow-[4px_4px_0_0_var(--ink)]"
+            >
+              Book a session
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* MARQUEE STRIP */}
+      <section className="skew-strip -mt-6 border-y-4 border-ink bg-primary py-3">
+        <p className="whitespace-nowrap text-center font-display text-xl uppercase tracking-[0.35em] text-primary-foreground">
+          ゴゴゴゴ · bold lines · unbreakable · ゴゴゴゴ · bold lines · unbreakable
+        </p>
+      </section>
+
+      {/* WORKS */}
+      <section className="halftone bg-background">
+        <div className="mx-auto max-w-6xl px-5 py-24">
+          <h2 className="text-5xl text-primary">RECENT WORK</h2>
+          <div className="mt-12 grid gap-8 md:grid-cols-3">
+            {works.map((w) => (
+              <article key={w.title} className="panel">
+                <img
+                  src={w.src}
+                  alt={w.title}
+                  loading="lazy"
+                  width={912}
+                  height={1104}
+                  className="h-80 w-full border-b-4 border-ink object-cover"
+                />
+                <div className="p-5">
+                  <h3 className="text-2xl text-secondary">{w.title}</h3>
+                  <p className="mt-1 text-sm uppercase tracking-[0.15em] text-muted-foreground">
+                    {w.meta}
+                  </p>
+                </div>
+              </article>
+            ))}
+          </div>
+          <Link
+            to="/gallery"
+            className="mt-12 inline-block border-b-4 border-primary font-display text-lg uppercase text-primary"
+          >
+            See the full gallery →
+          </Link>
+        </div>
+      </section>
+
+      {/* STUDIO */}
+      <section className="speed-lines border-t-4 border-ink bg-secondary">
+        <div className="mx-auto grid max-w-6xl gap-10 px-5 py-24 md:grid-cols-2">
+          <h2 className="text-5xl text-secondary-foreground">
+            A QUIET TOWN.
+            <br />
+            LOUD TATTOOS.
+          </h2>
+          <div className="space-y-5 text-lg text-secondary-foreground/90">
+            <p>
+              We work out of a small shop behind the Owson on Budogaoka. Three
+              artists, one machine each, no rushed appointments.
+            </p>
+            <p>
+              Every piece starts as a hand-inked drawing. If the design doesn't
+              feel strange enough to stop someone on the street, we redraw it.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
   );
 }
