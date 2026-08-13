@@ -7,13 +7,13 @@ import work3 from "@/assets/work-3.jpg";
 export const Route = createFileRoute("/gallery")({
   head: () => ({
     meta: [
-      { title: "Gallery — Morioh Ink Tattoo" },
+      { title: "Gallery — Toosh Tatoos" },
       {
         name: "description",
         content:
-          "Healed and fresh tattoo work from Morioh Ink: blackwork, screentone shading, and saturated color pieces.",
+          "Healed and fresh tattoo work from Toosh Tatoos: blackwork, screentone shading, and saturated color pieces.",
       },
-      { property: "og:title", content: "Gallery — Morioh Ink Tattoo" },
+      { property: "og:title", content: "Gallery — Toosh Tatoos" },
       {
         property: "og:description",
         content: "Blackwork, screentone shading and saturated color tattoo pieces.",

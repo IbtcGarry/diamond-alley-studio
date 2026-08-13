@@ -4,16 +4,16 @@ import { useState } from "react";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Book a Session — Morioh Ink Tattoo" },
+      { title: "Book a Session — Toosh Tatoos" },
       {
         name: "description",
         content:
-          "Request a tattoo consultation at Morioh Ink. Tell us the placement, size and idea, and we'll reply with a quote.",
+          "Request a tattoo consultation at Toosh Tatoos. Tell us the placement, size and idea, and we'll reply with a quote.",
       },
-      { property: "og:title", content: "Book a Session — Morioh Ink Tattoo" },
+      { property: "og:title", content: "Book a Session — Toosh Tatoos" },
       {
         property: "og:description",
-        content: "Request a tattoo consultation at Morioh Ink in Morioh-cho.",
+        content: "Request a tattoo consultation at Toosh Tatoos.",
       },
     ],
   }),
@@ -35,7 +35,7 @@ function Contact() {
               <dt className="text-sm uppercase tracking-[0.25em] text-secondary">
                 Studio
               </dt>
-              <dd className="text-foreground">4-2 Budogaoka, Morioh-cho</dd>
+              <dd className="text-foreground">4-2 Budogaoka</dd>
             </div>
             <div>
               <dt className="text-sm uppercase tracking-[0.25em] text-secondary">
