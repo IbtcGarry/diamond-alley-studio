@@ -8,16 +8,16 @@ import work3 from "@/assets/work-3.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Morioh Ink — Bizarre Tattoo Studio" },
+      { title: "Toosh Tatoos — Bizarre Tattoo Studio" },
       {
         name: "description",
         content:
-          "Morioh Ink is a tattoo studio for bold outlines, screentone shading and unbreakable design. Book a session in Morioh-cho.",
+          "Toosh Tatoos is a tattoo studio for bold outlines, screentone shading and unbreakable design. Book a session.",
       },
-      { property: "og:title", content: "Morioh Ink — Bizarre Tattoo Studio" },
+      { property: "og:title", content: "Toosh Tatoos — Bizarre Tattoo Studio" },
       {
         property: "og:description",
-        content: "Bold outlines, screentone shading, unbreakable design. Tattoo studio in Morioh-cho.",
+        content: "Bold outlines, screentone shading, unbreakable design. Tattoo studio.",
       },
     ],
   }),
@@ -37,7 +37,7 @@ function Index() {
       <section className="relative isolate overflow-hidden border-b-4 border-ink">
         <img
           src={heroTown}
-          alt="Illustrated suburban street in Morioh at golden dusk"
+          alt="Illustrated suburban street at golden dusk"
           width={1920}
           height={1088}
           className="absolute inset-0 h-full w-full object-cover"
@@ -45,10 +45,10 @@ function Index() {
         <div className="absolute inset-0 bg-ink/55" />
         <div className="relative mx-auto flex min-h-[86vh] max-w-6xl flex-col justify-center px-5 py-24">
           <p className="mb-4 inline-flex w-fit border-4 border-ink bg-accent px-3 py-1 text-xs font-bold uppercase tracking-[0.3em] text-accent-foreground">
-            Tattoo studio · Morioh-cho
+            Tattoo studio
           </p>
           <h1 className="manga-outline text-[clamp(3.5rem,12vw,9rem)] text-primary">
-            MORIOH INK
+            TOOSH TATOOS
           </h1>
           <p className="mt-6 max-w-xl text-lg text-foreground/90">
             Nothing here is ordinary. Heavy outlines, screentone shadows and

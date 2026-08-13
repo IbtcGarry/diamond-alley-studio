@@ -79,10 +79,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Morioh Ink — Tattoo Studio" },
+      { title: "Toosh Tatoos — Tattoo Studio" },
       {
         name: "description",
-        content: "Bizarre, bold, unbreakable tattoo work from Morioh Ink.",
+        content: "Bizarre, bold, unbreakable tattoo work from Toosh Tatoos.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },

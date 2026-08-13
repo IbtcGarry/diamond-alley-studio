@@ -3,13 +3,13 @@ import { createFileRoute } from "@tanstack/react-router";
 export const Route = createFileRoute("/artists")({
   head: () => ({
     meta: [
-      { title: "Artists — Morioh Ink Tattoo" },
+      { title: "Artists — Toosh Tatoos" },
       {
         name: "description",
         content:
-          "Meet the three resident tattoo artists at Morioh Ink and the styles each of them specializes in.",
+          "Meet the three resident tattoo artists at Toosh Tatoos and the styles each of them specializes in.",
       },
-      { property: "og:title", content: "Artists — Morioh Ink Tattoo" },
+      { property: "og:title", content: "Artists — Toosh Tatoos" },
       {
         property: "og:description",
         content: "Three resident artists, three very different specialties.",
