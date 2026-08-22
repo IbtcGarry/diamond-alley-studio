@@ -116,7 +116,7 @@ function Index() {
           <div className="space-y-5 text-lg text-secondary-foreground/90">
             <p>
               We work out of a small shop behind the Owson on Budogaoka. Three
-              artists, one machine each, no rushed appointments.
+              stations, one machine each, no rushed appointments.
             </p>
             <p>
               Every piece starts as a hand-inked drawing. If the design doesn't
