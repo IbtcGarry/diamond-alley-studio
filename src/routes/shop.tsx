@@ -24,28 +24,28 @@ export const Route = createFileRoute("/shop")({
 
 const products = [
   {
-    src: work1,
+    sample: true,
     name: "Aftercare Kit",
     price: "¥3,500",
     tag: "Essential",
     desc: "Saniderm, unscented soap, aftercare balm and a zine on healing bold color.",
   },
   {
-    src: work2,
+    sample: false,
     name: "Sticker Pack",
     price: "¥1,200",
     tag: "New",
     desc: "Five vinyl stickers: arrows, roses, skulls and the shop's name in katakana.",
   },
   {
-    src: work3,
+    sample: false,
     name: "Studio Tote",
     price: "¥2,800",
     tag: "Gear",
     desc: "Heavy canvas bag with a two-color screen print. Carries a sketchbook and ink.",
   },
   {
-    src: work1,
+    sample: false,
     name: "Appointment Deposit",
     price: "¥10,000",
     tag: "Booking",
