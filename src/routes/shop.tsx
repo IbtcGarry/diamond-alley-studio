@@ -1,8 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 
-import work1 from "@/assets/work-1.jpg";
-import work2 from "@/assets/work-2.jpg";
-import work3 from "@/assets/work-3.jpg";
+import { MediaSlot } from "@/components/media-slot";
 
 export const Route = createFileRoute("/shop")({
   head: () => ({
@@ -26,28 +24,28 @@ export const Route = createFileRoute("/shop")({
 
 const products = [
   {
-    src: work1,
+    sample: true,
     name: "Aftercare Kit",
     price: "¥3,500",
     tag: "Essential",
     desc: "Saniderm, unscented soap, aftercare balm and a zine on healing bold color.",
   },
   {
-    src: work2,
+    sample: false,
     name: "Sticker Pack",
     price: "¥1,200",
     tag: "New",
     desc: "Five vinyl stickers: arrows, roses, skulls and the shop's name in katakana.",
   },
   {
-    src: work3,
+    sample: false,
     name: "Studio Tote",
     price: "¥2,800",
     tag: "Gear",
     desc: "Heavy canvas bag with a two-color screen print. Carries a sketchbook and ink.",
   },
   {
-    src: work1,
+    sample: false,
     name: "Appointment Deposit",
     price: "¥10,000",
     tag: "Booking",
@@ -71,13 +69,10 @@ function Shop() {
           {products.map((p, i) => (
             <article key={`${p.name}-${i}`} className="panel flex flex-col">
               <div className="relative border-b-4 border-ink">
-                <img
-                  src={p.src}
+                <MediaSlot
+                  sample={p.sample}
                   alt={p.name}
-                  loading="lazy"
-                  width={912}
-                  height={1104}
-                  className="h-56 w-full object-cover"
+                  className="h-56 w-full"
                 />
                 <span className="absolute left-0 top-0 border-b-4 border-r-4 border-ink bg-accent px-3 py-1 text-xs font-bold uppercase tracking-[0.2em] text-accent-foreground">
                   {p.tag}

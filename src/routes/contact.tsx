@@ -1,6 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 
+import { MediaSlot } from "@/components/media-slot";
+
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
@@ -52,7 +54,18 @@ function Contact() {
               </dd>
             </div>
           </dl>
+          <figure className="panel mt-10">
+            <MediaSlot
+              sample
+              alt="Studio sample photo"
+              className="h-72 w-full border-b-4 border-ink"
+            />
+            <figcaption className="p-4 text-sm uppercase tracking-[0.15em] text-muted-foreground">
+              Latest studio snapshot
+            </figcaption>
+          </figure>
         </div>
+
 
         <form
           className="panel space-y-5 p-7"
