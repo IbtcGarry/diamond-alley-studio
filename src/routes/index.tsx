@@ -32,12 +32,9 @@ function Index() {
     <main>
       {/* HERO */}
       <section className="relative isolate overflow-hidden border-b-4 border-ink">
-        <img
-          src={heroTown}
-          alt="Illustrated suburban street at golden dusk"
-          width={1920}
-          height={1088}
-          className="absolute inset-0 h-full w-full object-cover"
+        <MediaSlot
+          alt="Hero image placeholder"
+          className="absolute inset-0 h-full w-full"
         />
         <div className="absolute inset-0 bg-ink/55" />
         <div className="relative mx-auto flex min-h-[86vh] max-w-6xl flex-col justify-center px-5 py-24">
