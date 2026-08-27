@@ -44,13 +44,10 @@ function Gallery() {
         <div className="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {pieces.map((p, i) => (
             <figure key={`${p.title}-${i}`} className="panel">
-              <img
-                src={p.src}
+              <MediaSlot
+                sample={p.sample}
                 alt={p.title}
-                loading="lazy"
-                width={912}
-                height={1104}
-                className="h-72 w-full border-b-4 border-ink object-cover"
+                className="h-72 w-full border-b-4 border-ink"
               />
               <figcaption className="p-4">
                 <span className="block font-display text-xl text-secondary">
