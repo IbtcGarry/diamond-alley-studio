@@ -1,9 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 
-import heroTown from "@/assets/hero-town.jpg";
-import work1 from "@/assets/work-1.jpg";
-import work2 from "@/assets/work-2.jpg";
-import work3 from "@/assets/work-3.jpg";
+import { MediaSlot } from "@/components/media-slot";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -25,9 +22,9 @@ export const Route = createFileRoute("/")({
 });
 
 const works = [
-  { src: work1, title: "Golden Arrow", meta: "Forearm · blackwork + gold" },
-  { src: work2, title: "Crazy Diamond", meta: "Full back · 3 sessions" },
-  { src: work3, title: "Kira Roses", meta: "Hand · pink & thorn" },
+  { sample: true, title: "Golden Arrow", meta: "Forearm · blackwork + gold" },
+  { sample: false, title: "Crazy Diamond", meta: "Full back · 3 sessions" },
+  { sample: false, title: "Kira Roses", meta: "Hand · pink & thorn" },
 ];
 
 function Index() {
