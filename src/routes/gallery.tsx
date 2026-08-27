@@ -22,12 +22,12 @@ export const Route = createFileRoute("/gallery")({
 });
 
 const pieces = [
-  { src: work1, title: "Golden Arrow", meta: "Forearm · 5 hours" },
-  { src: work2, title: "Crazy Diamond", meta: "Full back · 3 sessions" },
-  { src: work3, title: "Kira Roses", meta: "Hand · 4 hours" },
-  { src: work2, title: "Bad Company", meta: "Ribs · blackwork" },
-  { src: work3, title: "Sheer Heart", meta: "Sternum · color" },
-  { src: work1, title: "Stray Cat", meta: "Calf · linework" },
+  { sample: true, title: "Golden Arrow", meta: "Forearm · 5 hours" },
+  { sample: false, title: "Crazy Diamond", meta: "Full back · 3 sessions" },
+  { sample: false, title: "Kira Roses", meta: "Hand · 4 hours" },
+  { sample: false, title: "Bad Company", meta: "Ribs · blackwork" },
+  { sample: false, title: "Sheer Heart", meta: "Sternum · color" },
+  { sample: false, title: "Stray Cat", meta: "Calf · linework" },
 ];
 
 function Gallery() {
