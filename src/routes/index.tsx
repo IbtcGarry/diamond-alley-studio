@@ -73,13 +73,10 @@ function Index() {
           <div className="mt-12 grid gap-8 md:grid-cols-3">
             {works.map((w) => (
               <article key={w.title} className="panel">
-                <img
-                  src={w.src}
+                <MediaSlot
+                  sample={w.sample}
                   alt={w.title}
-                  loading="lazy"
-                  width={912}
-                  height={1104}
-                  className="h-80 w-full border-b-4 border-ink object-cover"
+                  className="h-80 w-full border-b-4 border-ink"
                 />
                 <div className="p-5">
                   <h3 className="text-2xl text-secondary">{w.title}</h3>
