@@ -69,13 +69,10 @@ function Shop() {
           {products.map((p, i) => (
             <article key={`${p.name}-${i}`} className="panel flex flex-col">
               <div className="relative border-b-4 border-ink">
-                <img
-                  src={p.src}
+                <MediaSlot
+                  sample={p.sample}
                   alt={p.name}
-                  loading="lazy"
-                  width={912}
-                  height={1104}
-                  className="h-56 w-full object-cover"
+                  className="h-56 w-full"
                 />
                 <span className="absolute left-0 top-0 border-b-4 border-r-4 border-ink bg-accent px-3 py-1 text-xs font-bold uppercase tracking-[0.2em] text-accent-foreground">
                   {p.tag}
