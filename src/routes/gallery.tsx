@@ -1,8 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 
-import work1 from "@/assets/work-1.jpg";
-import work2 from "@/assets/work-2.jpg";
-import work3 from "@/assets/work-3.jpg";
+import { MediaSlot } from "@/components/media-slot";
 
 export const Route = createFileRoute("/gallery")({
   head: () => ({
