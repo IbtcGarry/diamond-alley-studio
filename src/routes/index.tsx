@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 
 import { MediaSlot } from "@/components/media-slot";
+import heroTown from "@/assets/hero-town.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -32,11 +33,14 @@ function Index() {
     <main>
       {/* HERO */}
       <section className="relative isolate overflow-hidden border-b-4 border-ink">
-        <MediaSlot
-          alt="Hero image placeholder"
-          className="absolute inset-0 h-full w-full"
+        <img
+          src={heroTown}
+          alt="Sunset street in a quiet Japanese suburb"
+          width={1920}
+          height={1080}
+          className="absolute inset-0 h-full w-full object-cover"
         />
-        <div className="absolute inset-0 bg-ink/55" />
+        <div className="absolute inset-0 bg-ink/45" />
         <div className="relative mx-auto flex min-h-[86vh] max-w-6xl flex-col justify-center px-5 py-24">
           <p className="mb-4 inline-flex w-fit border-4 border-ink bg-accent px-3 py-1 text-xs font-bold uppercase tracking-[0.3em] text-accent-foreground">
             Tattoo studio
